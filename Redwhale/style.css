@@ -1,0 +1,306 @@
+/* ---------------------------------
+BASE
+--------------------------------- */
+:root {
+    --primary-color: #4f46bb; 
+    --secondary-color: #ac6855; 
+    --sidebar-text: #6d6d6d;
+    --body-color: #727272; 
+    --color-title: #192766;
+}
+
+/* ---------------------------------
+MAIN WRAPPERS
+--------------------------------- */
+html , body {
+    height: 100%;
+}
+body {
+    background: #fafafa;
+    font-family: 'Inter', sans-serif;
+    color: var(--body-color);
+}
+@media (min-width: 992px) {
+    .w-lg-100 {
+        width: 100%;
+    }
+    .h-lg-100 {
+        height: 100%;
+    }
+}
+.shadow-custom {
+    box-shadow: 0 1rem 3rem rgb(79 70 187 / 26%) !important;
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+.text-primary {
+    color: var(--primary-color) !important;
+}
+.fw-500 {
+    font-weight: 500;
+}
+.color-title {
+    color: var(--color-title);
+}
+.card-highlight {
+    background-color: #f2e8ff;
+}
+.mw-7 {
+    min-width: 7rem;
+}
+.small, small {
+    font-size: .75em;
+}
+
+/* ---------------------------------
+HEADER
+--------------------------------- */
+.logo-text {
+    font-size: 1rem;
+    color: var(--sidebar-text);
+}
+.logo-text .small {
+    font-size: 0.688rem;
+}
+.nav-link {
+    color: var(--sidebar-text);
+}
+.nav-link:focus, .nav-link:hover {
+    color: #000;
+}
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    font-weight: 600;
+}
+.navbar button.add-new {
+    width: 1.563rem;
+    height: 1.563rem;
+    color: var(--sidebar-text);
+    font-size: 0.75rem;
+}
+.navbar-collapse .accordion-button:not(.collapsed)::after {
+    filter: grayscale(100%);
+}
+.navbar-collapse .accordion-button::after {
+    margin-left: 1rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-size: contain;
+}
+.schedule-post-count {
+    padding: 0.188rem;
+    min-width: 2.188rem;
+    font-size: 0.813rem;
+    border-color: var(--sidebar-text) !important;
+}
+.navbar-collapse .dropdown-item {
+    color: var(--sidebar-text);
+}
+.navbar-collapse .dropdown-item:hover , .navbar-collapse .dropdown-item:focus , .navbar-collapse .dropdown-item.active {
+    color: #000;
+}
+@media screen and (min-width: 992px) {
+    .navbar-collapse {
+        overflow-y: scroll;
+        padding-right: 5px;
+    }
+    /* width */
+    .navbar-collapse::-webkit-scrollbar {
+        width: 5px;
+    }
+    
+    /* Track */
+    .navbar-collapse::-webkit-scrollbar-track {
+        background: #ffffff; 
+    }
+    
+    /* Handle */
+    .navbar-collapse::-webkit-scrollbar-thumb {
+        background: #e7e7e7;
+        border-radius: 5px;
+    }
+    
+    /* Handle on hover */
+    .navbar-collapse::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+}
+
+/* ---------------------------------
+BODY
+--------------------------------- */
+.sidebar {
+    width: 260px;  
+    border-right: #ddd solid 1px;
+}
+.sidebar * {
+    font-size: 0.875rem;
+}
+.page-content {
+    margin-left: 260px;  
+} 
+.page-content .page-middle {
+    flex: 1;
+}
+.page-content .page-right {
+    width: 100%;
+    max-width: 300px;
+}
+
+@media screen and (max-width: 991px) {
+    .sidebar {
+        width: 100% !important;
+        height: auto !important;
+        position: relative !important;
+    } 
+    .page-content {
+        margin-left: 0;
+    }
+    .page-content .page-right {
+        width: auto;
+        max-width: none;
+    }
+    .sidebar {
+        border-right: none;
+    }
+}
+@media screen and (min-width: 992px) {
+    .page-right:before {
+        content: '';
+        position: fixed;
+        width: 100%;
+        max-width: 300px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #fff;
+        border-left: #ddd solid 1px;
+        z-index: -1;
+    }
+} 
+@media (min-width: 1400px) {
+    .page-right:before {
+        max-width: 350px; 
+    }
+    .page-content .page-right {
+        max-width: 350px;
+    }
+}
+.users-list .user-sin .userimg {
+    width: 55px;
+    height: 55px;
+    padding: 3px;
+}
+.users-list .user-sin.active .userimg {
+    background-image: linear-gradient(170deg, #e98186, #269dbf);
+}
+.users-list .user-sin img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.users-list .user-sin span {
+    font-size: 0.75rem;
+}
+.users-list .user-sin a {
+    right: 8px;
+    bottom: -6px;
+    color: var(--primary-color);
+}
+.profile-action a {
+    width: 3.125rem;
+    height: 3.125rem;
+    box-shadow: #4f46bb0d 0px 8px 10px 1px;
+    border-color: #ededed !important;
+}
+.profile-intro h5 {
+    font-size: 1rem;
+}
+.profile-intro span.small {
+    font-size: 0.688rem;
+}
+.profile-main .profile-image {
+    width: 110px;
+    height: 110px;
+}
+.profile-overall-item span.small {
+    font-size: 0.75rem;
+}
+.profile-card-item .card-body span.small {
+    font-size: 0.75rem;
+}
+.profile-card-item.card-primary .card {
+    background: #f2e8ff;
+}
+.profile-card-item.card-primary .card-body * {
+    color: var(--primary-color);
+} 
+.profile-card-item.card-secondary .card {
+    background: #fef3f1;
+}
+.profile-card-item.card-secondary .card-body * {
+    color: var(--secondary-color);
+}
+.profile-uploads li {
+    flex: 0 0 33.333333%;
+    height: 115px;
+    border: #fff solid 1px;
+}
+.performance-section .p-bg1 {
+    background-image: url(assets/img/performance-bg-1.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 100px;
+}
+.performance-section .p-bg2 {
+    background-image: url(assets/img/performance-bg-2.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 100px;
+}
+.performance-section .p-bg3 {
+    background-image: url(assets/img/performance-bg-3.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 100px;
+}
+.formation-section .card-image-item {
+    width: 65px;
+    height: 65px;
+}
+.formation-section .card-image-item img {
+    object-fit: cover;
+}
+.formation-section .card-highlight {
+    width: 100%; 
+}
+.formation-section .card-highlight .badge {
+    padding: 1.25rem 1rem;
+}
+.formation-section h6 {
+    font-size: 0.75rem;
+}
+@media (min-width:1300px) {
+    .formation-section {
+        flex-wrap: nowrap !important;
+    }
+}
+@media (max-width:1399px) {
+    .event-dist-section h6 {
+        font-size: 0.75rem;
+    }
+}
+.post-info .badge {
+    padding: 1rem 0.688rem;
+}
+.monthly-target {
+    background-color: #52459f !important;
+}
+.monthly-target * {
+    color: #ffffff !important;
+}
+
